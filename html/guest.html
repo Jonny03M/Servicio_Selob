@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <!--Boostrap-->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+        <meta charset="UTF-8">
+        <link rel="icon" href="../imagenes/selob1.jpg">
+        <link rel="stylesheet" href="../css/verificationDesing.css"><!-- css/verificationDesing.css-->
+        <!--Para poder poner las nuevas alerts-->
+        <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+        <title>SELOB</title>
+    </head>
+    <body>  
+        <body data-spy="scroll" data-target=".navbar" data-offset="51">
+    <!-- Navbar Start -->
+        <nav class="navbar fixed-top shadow-sm navbar-expand-lg bg-dark navbar-dark py-1 py-lg-0 px-lg-5">
+            <a href="../index.html" class="navbar-brand d-block d-lg-none">
+                <h1 class="display-4 text-white text-uppercase m-0">SELOB</h1>
+            </a>
+            <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse justify-content-between" id="navbarCollapse">
+                <div class="navbar-nav ml-auto py-0">
+                    <a href="guest.html" class="nav-item nav-link active"> </a>
+                </div>
+                <a href="../index.html" class="navbar-brand px-4 mx-3 d-none d-lg-block">
+                    <h1 class="display-4 text-white text-uppercase m-0">SELOB</h1>
+                </a>
+                <div class="navbar-nav mr-auto py-0">
+                    <a href="guest.html" class="nav-item nav-link"> </a>
+                </div>
+            </div>
+        </nav>
+    </body>     
+    <!-- Navbar End -->
+
+    <div class="container card-0 justify-content-center">
+        <div class="card-body px-sm-4 px-0">
+            <div class="row justify-content-center mb-5">
+                <div class="col-md-10 col"><h3 class="font-weight-bold ml-md-0 mx-auto text-center text-sm-left"> HACER PUBLICACIÓN </h3><p class="mt-md-4  ml-md-0 ml-2 text-center text-sm-left">INGRESE LOS DATOS QUE SE SOLICITAN A CONTINUACIÓN:</p>
+                </div>
+            </div>
+            <div class="row justify-content-center round">
+                <div class="col-lg-10 col-md-12 ">
+                    <div class="card shadow-lg card-1">
+                        <div class="card-body inner-card">
+                            <div class="row">
+                                <div class="col-lg-5 col-md-6 col-sm-12"> 
+                                    <h6><br><br><br><br><br><br><br><br><br><br></h6>
+                                    <div class="contenedor">
+                                        <img src="../imagenes/selob1.jpg" class="img-fluid rounded">
+                                    </div>
+                                </div>
+                                <div class="col-lg-5 col-md-6 col-sm-12">
+                                    <div class="row px-3 mt-3 mb-0 border-line">
+                                        
+                                        
+                                        <form action="../php/guest.php" method="POST" enctype="multipart/form-data" id="myForm">
+                                            <h6><strong>Cuéntanos sobre ti</strong></h6>
+                                        <div class="form-group">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                                 class="bi bi-person" viewBox="0 0 16 16">
+                                            <path
+                                                d="M8 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6Zm2-3a2 2 0 1 1-4 0 2 2 0 0 1 4 0Zm4 8c0 1-1 1-1 1H3s-1 0-1-1 1-4 6-4 6 3 6 4Zm-1-.004c-.001-.246-.154-.986-.832-1.664C11.516 10.68 10.289 10 8 10c-2.29 0-3.516.68-4.168 1.332-.678.678-.83 1.418-.832 1.664h10Z" />
+                                            </svg>
+                                            <label for="name2">Nombre</label>
+                                            <input class="form-control" type="text" name="nombre2" placeholder="Nombre / Paterno / Materno" required>    
+                                        </div>
+                                        <div class="form-group">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-envelope" viewBox="0 0 16 16">
+                                            <path d="M0 4a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V4Zm2-1a1 1 0 0 0-1 1v.217l7 4.2 7-4.2V4a1 1 0 0 0-1-1H2Zm13 2.383-4.708 2.825L15 11.105V5.383Zm-.034 6.876-5.64-3.471L8 9.583l-1.326-.795-5.64 3.47A1 1 0 0 0 2 13h12a1 1 0 0 0 .966-.741ZM1 11.105l4.708-2.897L1 5.383v5.722Z"/>
+                                            </svg>
+                                            <label for="correo">Correo:</label>
+                                            <input class="form-control" type="text" name="correo" placeholder="Correo personal" required>    
+                                        </div>
+                                        <h6><br><strong>Datos de la credencial que encontraste</strong></h6>
+                                        
+                                            <div class="form-group">
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                                     class="bi bi-person" viewBox="0 0 16 16">
+                                                <path
+                                                    d="M8 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6Zm2-3a2 2 0 1 1-4 0 2 2 0 0 1 4 0Zm4 8c0 1-1 1-1 1H3s-1 0-1-1 1-4 6-4 6 3 6 4Zm-1-.004c-.001-.246-.154-.986-.832-1.664C11.516 10.68 10.289 10 8 10c-2.29 0-3.516.68-4.168 1.332-.678.678-.83 1.418-.832 1.664h10Z" />
+                                                </svg>
+                                                <label for="name">Nombre</label>
+                                                <input class="form-control" type="text" name="nombre" placeholder="Nombre / Paterno / Materno" required>    
+                                            </div>
+                                            <div class="form-group">
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                                     class="bi bi-mortarboard" viewBox="0 0 16 16">
+                                                <path
+                                                    d="M8.211 2.047a.5.5 0 0 0-.422 0l-7.5 3.5a.5.5 0 0 0 .025.917l7.5 3a.5.5 0 0 0 .372 0L14 7.14V13a1 1 0 0 0-1 1v2h3v-2a1 1 0 0 0-1-1V6.739l.686-.275a.5.5 0 0 0 .025-.917l-7.5-3.5ZM8 8.46 1.758 5.965 8 3.052l6.242 2.913L8 8.46Z" />
+                                                <path
+                                                    d="M4.176 9.032a.5.5 0 0 0-.656.327l-.5 1.7a.5.5 0 0 0 .294.605l4.5 1.8a.5.5 0 0 0 .372 0l4.5-1.8a.5.5 0 0 0 .294-.605l-.5-1.7a.5.5 0 0 0-.656-.327L8 10.466 4.176 9.032Zm-.068 1.873.22-.748 3.496 1.311a.5.5 0 0 0 .352 0l3.496-1.311.22.748L8 12.46l-3.892-1.556Z" />
+                                                </svg>
+                                                <label for="name">Matricula</label>
+                                                <input class="form-control" type="text" name="matricula" placeholder="Matricula" required>
+                                            </div>
+                                            <div class="form-group">
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                                     class="bi bi-building" viewBox="0 0 16 16">
+                                                <path
+                                                    d="M4 2.5a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-1a.5.5 0 0 1-.5-.5v-1Zm3 0a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-1a.5.5 0 0 1-.5-.5v-1Zm3.5-.5a.5.5 0 0 0-.5.5v1a.5.5 0 0 0 .5.5h1a.5.5 0 0 0 .5-.5v-1a.5.5 0 0 0-.5-.5h-1ZM4 5.5a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-1a.5.5 0 0 1-.5-.5v-1ZM7.5 5a.5.5 0 0 0-.5.5v1a.5.5 0 0 0 .5.5h1a.5.5 0 0 0 .5-.5v-1a.5.5 0 0 0-.5-.5h-1Zm2.5.5a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-1a.5.5 0 0 1-.5-.5v-1ZM4.5 8a.5.5 0 0 0-.5.5v1a.5.5 0 0 0 .5.5h1a.5.5 0 0 0 .5-.5v-1a.5.5 0 0 0-.5-.5h-1Zm2.5.5a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-1a.5.5 0 0 1-.5-.5v-1Zm3.5-.5a.5.5 0 0 0-.5.5v1a.5.5 0 0 0 .5.5h1a.5.5 0 0 0 .5-.5v-1a.5.5 0 0 0-.5-.5h-1Z" />
+                                                <path
+                                                    d="M2 1a1 1 0 0 1 1-1h10a1 1 0 0 1 1 1v14a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V1Zm11 0H3v14h3v-2.5a.5.5 0 0 1 .5-.5h3a.5.5 0 0 1 .5.5V15h3V1Z" />
+                                                </svg>
+                                                <label for="name">Facultad</label>
+                                                <input class="form-control" type="text" name="facultad" placeholder="Facultad" required>
+                                            </div>
+                                            <div class="form-group">
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                                     class="bi bi-blockquote-left" viewBox="0 0 16 16">
+                                                <path
+                                                    d="M2.5 3a.5.5 0 0 0 0 1h11a.5.5 0 0 0 0-1h-11zm5 3a.5.5 0 0 0 0 1h6a.5.5 0 0 0 0-1h-6zm0 3a.5.5 0 0 0 0 1h6a.5.5 0 0 0 0-1h-6zm-5 3a.5.5 0 0 0 0 1h11a.5.5 0 0 0 0-1h-11zm.79-5.373c.112-.078.26-.17.444-.275L3.524 6c-.122.074-.272.17-.452.287-.18.117-.35.26-.51.428a2.425 2.425 0 0 0-.398.562c-.11.207-.164.438-.164.692 0 .36.072.65.217.873.144.219.385.328.72.328.215 0 .383-.07.504-.211a.697.697 0 0 0 .188-.463c0-.23-.07-.404-.211-.521-.137-.121-.326-.182-.568-.182h-.282c.024-.203.065-.37.123-.498a1.38 1.38 0 0 1 .252-.37 1.94 1.94 0 0 1 .346-.298zm2.167 0c.113-.078.262-.17.445-.275L5.692 6c-.122.074-.272.17-.452.287-.18.117-.35.26-.51.428a2.425 2.425 0 0 0-.398.562c-.11.207-.164.438-.164.692 0 .36.072.65.217.873.144.219.385.328.72.328.215 0 .383-.07.504-.211a.697.697 0 0 0 .188-.463c0-.23-.07-.404-.211-.521-.137-.121-.326-.182-.568-.182h-.282a1.75 1.75 0 0 1 .118-.492c.058-.13.144-.254.257-.375a1.94 1.94 0 0 1 .346-.3z" />
+                                                </svg>
+                                                <label for="name">Descripción</label>
+                                                <input class="form-control" type="text" name="descripcion" placeholder="Descripción de donde lo hallo" required>
+                                            </div>
+                                        
+                                            <div class="form-group">
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                                     class="bi bi-image-alt" viewBox="0 0 16 16">
+                                                <path
+                                                    d="M7 2.5a2.5 2.5 0 1 1-5 0 2.5 2.5 0 0 1 5 0zm4.225 4.053a.5.5 0 0 0-.577.093l-3.71 4.71-2.66-2.772a.5.5 0 0 0-.63.062L.002 13v2a1 1 0 0 0 1 1h14a1 1 0 0 0 1-1v-4.5l-4.777-3.947z" />
+                                                </svg>
+                                                <label for="name">Fotografia</label>
+                                                <input class="form-control" type="file" name="imagen" accept=".jpg, .png, .jpeg" required>
+                                                
+                                            </div>
+                                        
+                                            <h6><br></h6>
+                                                <div class="col-lg-7 col-auto "><button type="submit" class="btn btn-primary btn-block"  class="font-weight-bold">Publicar</button> </div>                                                
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer Start -->
+    <div class="container-fluid bg-dark text-white py-5 px-sm-3 px-lg-5" style="margin-top: 1px;">
+        <div class="row pt-3">
+            <div class="col-12 mb-3 px-4">
+                <div class="row mb-3 p-4" style="background: rgba(256, 256, 256, .05);">
+                    <div class="col-md-4">
+                        <div class="text-md-center">
+                            <h5 class="text-primary text-uppercase mb-2" style="letter-spacing: 5px;">Localización</h5>
+                            <p class="mb-4 m-md-0">Puebla,Puebla</p>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="text-md-center">
+                            <h5 class="text-primary text-uppercase mb-2" style="letter-spacing: 5px;">Contactanos</h5>
+                            <p class="mb-4 m-md-0">lusu@software.com</p>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="text-md-center">
+                            <h5 class="text-primary text-uppercase mb-2" style="letter-spacing: 5px;">Call Us</h5>
+                            <p class="m-0">+52 *********</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container-fluid bg-dark text-white text-center border-top py-4 px-sm-3 px-md-5" style="border-color: rgba(256, 256, 256, .05) !important;">
+        <p class="m-0 text-white">&copy; <a href="#">Lusu Software</a>. Todos los Derechos Reservados. Designed by <a href="https://htmlcodex.com">HTML Codex</a></p>
+    </div>
+    <!-- Footer End -->
+
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+    <!--Para colocar los mensajes necesarios en los alert-->
+    <script>
+        // Función para limpiar los campos del formulario
+       function limpiarFormulario() {
+           document.getElementById("myForm").reset(); // Restablecer el formulario
+       }
+       // Función para mostrar la alerta
+       function mostrarAlerta(status, message) {
+           if (status === 'success') {
+               swal({
+                   title: "¡Buen trabajo!",
+                   text: message,
+                   icon: "success",
+                   button: "¡Aceptar!"
+               });
+           } else {
+               swal({
+                   title: "Error",
+                   text: message,
+                   icon: "error",
+                   button: "Cerrar"
+               });
+           }
+       }
+       
+       // Función para manejar el evento de envío del formulario
+       function handleSubmit(event) {
+           event.preventDefault(); // Evitar que el formulario se envíe de forma convencional
+       
+           // Enviar una solicitud al archivo PHP usando AJAX
+           var formData = new FormData(this);
+           fetch(this.action, {
+               method: 'POST',
+               body: formData
+           })
+           .then(response => response.json())
+           .then(data => {
+               // Manejar la respuesta del servidor
+               mostrarAlerta(data.status, data.message);
+               if (data.status === 'success') {
+                   limpiarFormulario(); // Limpiar el formulario si la respuesta es exitosa
+               }
+           })
+           .catch(error => {
+               console.error('Error al enviar la solicitud:', error);
+           });
+       }
+       
+       // Esperar a que se cargue completamente el documento
+       document.addEventListener("DOMContentLoaded", function() {
+           // Agregar un event listener al formulario para manejar el evento de envío
+           document.getElementById("myForm").addEventListener("submit", handleSubmit);
+       });
+       </script>
+
+
+</body>
+</html>

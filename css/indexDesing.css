@@ -1,0 +1,265 @@
+.body{
+    background-color: black;
+}
+
+.btn-registro{
+    background: rgb(0, 59, 92);;
+    color: #E2FFFE;
+    width: 130px;
+    height: 50px;
+    border: 2px solid rgb(0, 59, 92);;
+    outline: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 1.1em;
+    font-weight: 500;
+    margin-left: 40px;
+    transition: 0.5s;
+}
+
+.btn-registro:hover{
+    background: #E2FFFE;
+    color: rgb(0, 59, 92);;
+}
+
+/*DISEÑO DEL CONTENEDOR DE LA PARTE INFERIOR*/
+.wrapper{
+    position: absolute;
+    top: 15%;
+    left: 38%;
+    width: 400px;
+    height: 500px;
+    background: transparent;
+    border: 2px solid #E2FFFE;
+    border-radius: 20px;
+    box-shadow: 0 15px 50px rgba(0,0,0,0.1);
+    backdrop-filter: blur(5px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    transform: scale(0);
+    transition: transform 0.5s ease ,height 0.2s ease;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.wrapper.active-registro{
+    transform: scale(1);
+}
+
+.wrapper.active{
+    height: 520px;
+}
+
+.wrapper.active-guest{
+    height: 500px;
+}
+
+/*DISEÑO DEL CONTENEDOR DE LA PARTE INFERIOR*/
+.wrapper .form-box{
+    width: 100%;
+    padding: 40px;
+}
+
+
+/*PARA OCULTAR EL BOX DE INICIO DE SESION*/
+.wrapper .form-box.registro{
+transition: transform 0.18s ease;
+transform: translate(0);
+}
+
+.wrapper.active .form-box.registro{
+    transition: none;
+    transform: translateX(-400px);
+}
+
+
+.wrapper .form-box.crearuser{
+    position: absolute;
+    transition:none;
+    transform: translate(400px);
+}
+
+.wrapper .form-box.crearguest{
+    position: absolute;
+    transition:none;
+    transform: translate(400px);
+}
+/*----------------------------------------*/
+
+.wrapper.active .form-box.crearuser {
+    transition: transform 0.18s ease;
+    transform: translateX(0);
+}
+
+.wrapper.active .form-box.crearguest{
+    transition: transform 0.18s ease;
+    transform: translateX(0);
+}    
+
+
+/*COLOCAR UNA FIGURA EN FORMA X PARA CERRAR*/
+
+.wrapper .icon-close{
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    width: 45px;
+    height: 45px;
+    font-size: 2em;
+    background: rgb(0, 59, 92);;
+    color: #E2FFFE;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-bottom-left-radius: 20px;
+    cursor: pointer;
+    z-index: 1;
+}
+
+/*DISEÑO DEL CONTENEDOR DE LA PARTE INFERIOR EL TITULO DE REGISTRO*/
+.form-box h2{
+    font-size: 2em;
+    text-align: center;
+    color: #E2FFFE;
+    margin-bottom: 20px;
+    font-weight: 500;
+}
+
+/*AGREGA UNAS LINEAS DE SEPARACION EN LA PARTE DE CORREO Y CONTRASEÑA*/
+.input-box{
+    position: relative;
+    width: 100%;
+    height: 50px;
+    border-bottom: 2px solid #E2FFFE;
+    margin: 30px 0;
+}
+
+/*DISEÑO DEL ICONO DE CORREO Y CONTRASEÑA*/
+.input-box label{
+    position: absolute;
+    top: 0;
+    left: 0;
+    font-size: 1.1em;
+    color: #E2FFFE;
+    pointer-events: none;
+    transition: 0.5s;
+    line-height: 50px;
+    transition: .5s;
+}
+
+/*DISEÑO DEL INPUT DE CORREO Y CONTRASEÑA*/
+.input-box input{
+   width: 100%;
+    height: 100%;
+    background: transparent;
+    border: none;
+    outline: none;
+    font-size: 1em;
+    color: aliceblue;
+    padding: 0 35px 0 5px;
+}
+
+/*DISEÑO DEL INPUT DE CORREO Y CONTRASEÑA AL PASAR EL MOUSE*/
+.input-box input:focus ~ label, .input-box input:valid ~ label{
+    top: -20px;
+    color: #E2FFFE;
+    font-size: 1em;
+}
+
+/*ICONOS*/
+.input-box .icon{
+    position: absolute;
+    right: 8px;
+    font-size: 1.2em;
+    color: #E2FFFE;
+    line-height: 57px;
+}
+
+/*DISEÑO DEL BOTON DE "RECUERDAME"*/
+
+.form-box .recordarme{
+    display: flex;
+    font-weight: 500;
+    margin: -15px 0 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: #E2FFFE;
+    font-size: 1em;
+}
+
+/*DISEÑO DEL BOTON DE "RECUERDAME"*/
+.recordarme label input{
+    accent-color: #0d6d7e;
+    margin-right: 3px;
+}
+
+/*DISEÑO DEL TEXTO DE "OLVIDE MI CONTRASEÑA"*/
+.recordarme a{
+    color: #E2FFFE;
+    text-decoration: none;
+    font-size: 1em;
+    transition: 0.5s;
+}
+
+/*DISEÑO DEL TEXTO DE "OLVIDE MI CONTRASEÑA" AL PASAR EL MOUSE*/
+.recordarme a:hover{
+    color: rgb(0, 181, 226);
+    text-decoration: underline;
+}
+
+/*DISEÑO DEL TEXTO DE "REGISTRATE"*/
+
+.logeo-registro {
+    margin-top: 20px;
+    text-align: center;
+    color: #E2FFFE;
+    font-size: 1em;
+}
+
+/*DISEÑO DEL TEXTO DE "REGISTRATE"*/
+.logeo-registro a{
+    color: #E2FFFE;
+    text-decoration: none;
+    font-size: 1em;
+    transition: 0.5s;
+}
+
+/*DISEÑO DEL TEXTO DE "REGISTRATE" AL PASAR EL MOUSE*/
+.logeo-registro a:hover{
+    color: rgb(0, 181, 226);
+    text-decoration: underline;
+}
+
+/*DISEÑO DEL BOTON DE "REGISTRAR"*/
+
+.btn{
+    background: rgb(0, 59, 92);
+    color: #E2FFFE;
+    width: 150px;
+    border: 2px solid rgb(0, 59, 92);;
+    outline: none;
+    text-decoration: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 1.2em;
+    font-weight: 60;
+    margin-left: 60px;
+    transition: 0.5s;
+}
+
+/*DISEÑO DEL BOTON DE "REGISTRAR" AL PASAR EL MOUSE*/
+.btn:hover{
+    background: #E2FFFE;
+    color: rgb(0, 59, 92);;
+}
+
+* {
+    font-family: 'Poppins', sans-serif;
+}
+
+.bg-custom{
+    background-color: rgb(13, 84, 217);
+}
